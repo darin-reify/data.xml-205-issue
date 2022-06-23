@@ -1,0 +1,14 @@
+{ :paths ["src"]
+
+ :deps
+ {org.clojure/clojure {:mvn/version "1.11.1"}}
+
+ :aliases
+ {:with-aalto
+  {:extra-deps {org.clojure/data.xml {:mvn/version "0.2.0-alpha6"}
+                com.fasterxml/aalto-xml {:mvn/version "1.3.2"}}
+   :exec-fn repo/pprint}
+
+  :without-aalto
+  {:extra-deps {org.clojure/data.xml {:mvn/version "0.2.0-alpha6"}}
+   :exec-fn repo/pprint}}}
